@@ -11,7 +11,8 @@
         "preview": "vite preview",
         "test": "vitest",
         "test:unit": "vitest --root src/",
-        "format:fix": "npm run lint & prettier --write --list-different ."
+        "format:fix": "npm run lint & prettier --write --list-different .",
+        "pipe:check": "npm run test & npm run lint & npm run format:fix"
     },
     "husky": {
         "hooks": {
