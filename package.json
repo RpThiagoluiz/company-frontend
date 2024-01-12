@@ -11,12 +11,8 @@
         "preview": "vite preview",
         "test": "vitest",
         "test:unit": "vitest --root src/",
-        "format:fix": "npm run lint & prettier --write --list-different ."
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
+        "format:fix": "npm run lint & prettier --write --list-different .",
+        "pipe:check": "npm run test & npm run lint & npm run format:fix"
     },
     "lint-staged": {
         "src/**/*.{js,jsx,ts,tsx}": [
@@ -35,6 +31,8 @@
         "sort-by": "^0.0.2"
     },
     "devDependencies": {
+        "@commitlint/cli": "^18.4.4",
+        "@commitlint/config-conventional": "^18.4.4",
         "@testing-library/react": "^14.1.2",
         "@types/node": "^20.11.0",
         "@types/react": "^18.2.43",
