@@ -22,7 +22,7 @@ jobs:
             - uses: actions/checkout@v3
             - name: Install packages
               run: npm ci
-            - name: Prepare Husky
-              run: npm run prepare
-            - name: Pipe Check Fix
+            - name: Testing... 💕
+              run: npm run test
+            - name: Pipe Check Fix 🪁
               run: npm run pipe:check
