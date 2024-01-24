@@ -4,6 +4,6 @@ import { Home } from '../../Pages/Home'
 
 test('Render App Page', () => {
     render(<Home />)
-    const linkElement = screen.getByText(/Home/i)
+    const linkElement = screen.getByText(/Transforme/i)
     expect(linkElement).toBeDefined()
 })

@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Icon from '../../images/level.png'
+import Icon from '../../images/TF/hero.png'
 import { NavLink } from 'react-router-dom'
 import { GiHamburgerMenu } from 'react-icons/gi'
 import { useControlNavbar } from './hooks/useControlNavbar'
@@ -12,7 +12,7 @@ export function Navbar() {
 
     return (
         <nav
-            className={`w-full h-20 bg-gray-900 z-20 sticky top-0 right-0 left-0 sm:h-auto flex flex-col sm:flex-row items-center justify-between transition-transform duration-300 ${showNavBar}`}
+            className={`w-full h-20  md:backdrop-blur-sm md:bg-inherit bg-white border-b-2 border-stone-300 drop-shadow-2xl z-20 sticky top-0 right-0 left-0 sm:h-auto flex flex-col sm:flex-row items-center justify-between transition-transform duration-300 ${showNavBar}`}
         >
             {/* dektop nav */}
             <div className="w-full flex flex-wrap items-center justify-between mx-auto p-5">
@@ -28,18 +28,18 @@ export function Navbar() {
                     <img
                         src={Icon}
                         alt="icon"
-                        className="h-[35px] w-[35px] hidden sm:flex"
+                        className="h-[35px] w-[35px] hidden sm:flex drop-shadow-3xl "
                     />
-                    <span className="ml-2 mt-2 sm:mt-0 text-white font-semibold text-xl">
+                    <span className="ml-2 mt-2 sm:mt-0 text-black font-semibold text-xl">
                         TF Solutions
                     </span>
                 </NavLink>
                 <nav className="flex">
                     <ul className="sm:flex justify-center hidden">
                         <NavItems routePath="/" routeName="Home" />
-                        <NavItems routePath="/about" routeName="About" />
-                        <NavItems routePath="/services" routeName="Services" />
-                        <NavItems routePath="/contact" routeName="Contact" />
+                        <NavItems routePath="/about" routeName="Sobre" />
+                        <NavItems routePath="/services" routeName="Serviços" />
+                        <NavItems routePath="/contact" routeName="Contato" />
                     </ul>
                 </nav>
                 <nav className="flex">
@@ -51,7 +51,7 @@ export function Navbar() {
                     >
                         <GiHamburgerMenu
                             size={30}
-                            className="mt-2 mr-2 text-white/70"
+                            className="mt-2 mr-2 text-black "
                         />
                     </button>
                 </nav>
@@ -59,7 +59,7 @@ export function Navbar() {
 
             {/* desktop nav end */}
             <nav
-                className={`${openMobileMenu ? 'none' : 'hidden'}  h-[49rem] w-full bg-gray-900`}
+                className={`${openMobileMenu ? 'none' : 'hidden'}  h-[49rem] w-full bg-white`}
             >
                 <ul>
                     <NavItems
@@ -74,7 +74,7 @@ export function Navbar() {
                     />
                     <NavItems
                         routePath="/about"
-                        routeName="About"
+                        routeName="Sobre"
                         extraStyles="font-semibold pl-8 pb-4"
                         onCloseMobileMenu={() => {
                             if (openMobileMenu) {
@@ -84,7 +84,7 @@ export function Navbar() {
                     />
                     <NavItems
                         routePath="/services"
-                        routeName="Services"
+                        routeName="Serviços"
                         extraStyles="font-semibold pl-8 pb-4"
                         onCloseMobileMenu={() => {
                             if (openMobileMenu) {
@@ -94,7 +94,7 @@ export function Navbar() {
                     />
                     <NavItems
                         routePath="/contact"
-                        routeName="Contact"
+                        routeName="Contato"
                         extraStyles="font-semibold pl-8 pb-4"
                         onCloseMobileMenu={() => {
                             if (openMobileMenu) {

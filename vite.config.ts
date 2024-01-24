@@ -18,7 +18,7 @@ export default defineConfig({
     plugins: [react()],
     test: vitestConfig.test,
     server: {
-        port: 3000,
+        port: 9000,
     },
     resolve: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],

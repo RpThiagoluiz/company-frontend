@@ -5,7 +5,7 @@ export function SemiDividerHorizontal(props: {
 }) {
     return (
         <div
-            className={`w-[70%] h-[2px] bg-gradient-to-r from-blue-400 to-violet-500 ${props.extraStyles}`}
+            className={`w-[70%] h-[2px] bg-gradient-to-r from-green-400 to-zinc-800 ${props.extraStyles}`}
         />
     )
 }

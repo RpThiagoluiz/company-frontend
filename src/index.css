@@ -19,3 +19,44 @@ body {
         @apply text-slate-400;
     }
 }
+
+:root {
+    --primary: #4ade80;
+    --secondary: #d6d3d1;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) var(--secondary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 45%,
+        var(--primary) 45%,
+        var(--secondary) 55%,
+        rgba(0, 0, 0, 0) 55%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--primary);
+    border-radius: 2px;
+    -webkit-box-shadow: 50px 50px 10px var(--primary);
+    -moz-box-shadow: 50px 50px 10px var(--primary);
+    box-shadow: 50px 50px 10px var(--primary);
+}
