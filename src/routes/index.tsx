@@ -7,18 +7,13 @@ export function AppRoutes() {
     return (
         <BrowserRouter>
             <Navbar />
-            <div className="h-[1800px]">
-                <Routes>
-                    {React.Children.toArray(
-                        routes.map((route) => (
-                            <Route
-                                path={route.path}
-                                element={route.component}
-                            />
-                        )),
-                    )}
-                </Routes>
-            </div>
+            <Routes>
+                {React.Children.toArray(
+                    routes.map((route) => (
+                        <Route path={route.path} element={route.component} />
+                    )),
+                )}
+            </Routes>
         </BrowserRouter>
     )
 }
