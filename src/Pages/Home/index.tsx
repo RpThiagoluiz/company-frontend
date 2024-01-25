@@ -9,7 +9,7 @@ import { DigitalTransformation } from './components/DigitalTransformation'
 
 export function Home() {
     return (
-        <div className=" bg-stone-100 overflow-x-hidden">
+        <main className=" bg-stone-100 overflow-x-hidden">
             <Hero />
             <About />
             <Divider.HorizontalLeft extraStyles="my-[6rem]" />
@@ -19,6 +19,20 @@ export function Home() {
             <Divider.HorizontalLeft extraStyles="my-[6rem]" />
 
             <DigitalTransformation />
+            <article className="bg-blue-900 h-svh flex items-center justify-center">
+                <p className="text-3xl md:text-5xl font-bold">
+                    Action com texto e botão ao clicar leva para o formulário de
+                    contato ao final da pagina
+                </p>
+            </article>
+
+            <Divider.HorizontalLeft extraStyles="mt-[6rem]" />
+
+            <article className="bg-pink-900 h-svh flex items-center justify-center">
+                <p className="text-3xl md:text-5xl font-bold">
+                    Projetos terminados e experiencia
+                </p>
+            </article>
 
             <Divider.HorizontalLeft extraStyles="mt-[6rem]" />
 
@@ -46,6 +60,6 @@ export function Home() {
                     />
                 </section>
             </article>
-        </div>
+        </main>
     )
 }

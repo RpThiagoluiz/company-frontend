@@ -16,7 +16,7 @@ export function Features() {
                 <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
                     <div>
                         <h1 className="text-3xl md:text-5xl font-bold  md:ml-5 text-center mb-20">
-                            Tecnologias
+                            Avance
                         </h1>
                     </div>
                     <Innovation />
