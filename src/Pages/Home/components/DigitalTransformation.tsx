@@ -36,7 +36,7 @@ export function DigitalTransformation() {
           aria-hidden="true"
           animate={motionAnimation}
           transition={{ duration: 0.75, delay: 0.5 }}
-          className="group flex flex-col justify-around rounded-xl  p-5 min-h-[20rem]"
+          className="group flex flex-col justify-around rounded-xl  p-5 min-h-[20rem] bg-slate-800"
         >
           <div className="flex items-center gap-7">
             <TbWorldWww className="text-6xl text-green-500 drop-shadow-3xl group-hover:scale-125 transition ease-in-out delay-150" />
