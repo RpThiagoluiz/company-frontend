@@ -6,11 +6,11 @@ import { Services } from '@/Pages/Services'
 export type Routes = '/' | '/about' | '/services' | '/contact'
 
 export const routes: {
-    path: Routes
-    component: JSX.Element
+   path: Routes
+   component: JSX.Element
 }[] = [
-    { path: '/', component: <Home /> },
-    { path: '/about', component: <About /> },
-    { path: '/services', component: <Services /> },
-    { path: '/contact', component: <Contact /> },
+   { path: '/', component: <Home /> },
+   { path: '/about', component: <About /> },
+   { path: '/services', component: <Services /> },
+   { path: '/contact', component: <Contact /> },
 ]

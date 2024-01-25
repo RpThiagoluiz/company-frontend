@@ -8,24 +8,24 @@ import path from 'path'
 // https://vitejs.dev/config/
 
 const vitestConfig: VitestUserConfigInterface = {
-    test: {
-        globals: true,
-        environment: 'jsdom',
-    },
+   test: {
+      globals: true,
+      environment: 'jsdom',
+   },
 }
 
 export default defineConfig({
-    plugins: [react()],
-    test: vitestConfig.test,
-    server: {
-        port: 9000,
-    },
-    resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
-        alias: {
-            '@': path.join(__dirname, 'src/'),
-            '@mock': path.join(__dirname, 'src/Mock/'),
-            '@components': path.join(__dirname, 'src/components/'),
-        },
-    },
+   plugins: [react()],
+   test: vitestConfig.test,
+   server: {
+      port: 9000,
+   },
+   resolve: {
+      extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
+      alias: {
+         '@': path.join(__dirname, 'src/'),
+         '@mock': path.join(__dirname, 'src/Mock/'),
+         '@components': path.join(__dirname, 'src/components/'),
+      },
+   },
 })

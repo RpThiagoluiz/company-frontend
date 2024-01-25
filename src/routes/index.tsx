@@ -5,17 +5,17 @@ import { routes } from './registerRoutes'
 
 import { Footer } from '@/components/Footer'
 export function AppRoutes() {
-    return (
-        <BrowserRouter>
-            <Navbar />
-            <Routes>
-                {React.Children.toArray(
-                    routes.map((route) => (
-                        <Route path={route.path} element={route.component} />
-                    )),
-                )}
-            </Routes>
-            <Footer />
-        </BrowserRouter>
-    )
+   return (
+      <BrowserRouter>
+         <Navbar />
+         <Routes>
+            {React.Children.toArray(
+               routes.map((route) => (
+                  <Route path={route.path} element={route.component} />
+               )),
+            )}
+         </Routes>
+         <Footer />
+      </BrowserRouter>
+   )
 }
