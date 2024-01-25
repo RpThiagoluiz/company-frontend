@@ -17,7 +17,7 @@ export function About() {
     }, [isInView, motionAnimation])
 
     return (
-        <section className="mt-8 md:mt-32">
+        <section className="mt-8 md:mt-32 px-8">
             <div className="flex flex-col-reverse md:flex-row md:h-[25rem] gap-20 my-5">
                 <img
                     loading="lazy"

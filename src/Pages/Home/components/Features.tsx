@@ -186,7 +186,7 @@ const Innovation = () => {
 }
 
 const Personalized = () => {
-    const triggerRef = useRef<HTMLHeadingElement | null>(null)
+    const triggerRef = useRef<HTMLParagraphElement | null>(null)
     const divRef = useRef<HTMLDivElement | null>(null)
     const isInView = useInView(triggerRef)
     const motionAnimation = useAnimation()
@@ -199,19 +199,19 @@ const Personalized = () => {
 
     return (
         <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
-            <motion.div ref={triggerRef} className="lg:col-start-2">
+            <div className="lg:col-start-2">
                 <h3 className="text-2xl font-bold tracking-tight sm:text-3xl ">
                     Decisões Embasadas em Dados, Soluções Personalizadas e
                     Otimização para Motores de Busca (SEO)
                 </h3>
-                <p className="mt-3 text-lg ">
+                <motion.p ref={triggerRef} className="mt-3 text-lg ">
                     Impulsione o seu negócio com decisões embasadas em dados,
                     soluções personalizadas e uma presença online robusta. Na
                     vanguarda da inovação, nossas análises poderosas são
                     adaptadas especificamente às suas necessidades, preparando o
                     terreno para o futuro com nosso compromisso inabalável com a
                     inovação.
-                </p>
+                </motion.p>
                 <div className="mt-12 space-y-12">
                     <motion.div
                         ref={divRef}
@@ -333,7 +333,7 @@ const Personalized = () => {
                         </div>
                     </motion.div>
                 </div>
-            </motion.div>
+            </div>
             <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
                 <img
                     src={image2}
