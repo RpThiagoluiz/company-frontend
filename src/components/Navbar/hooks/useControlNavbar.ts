@@ -1,34 +1,34 @@
 import { useCallback, useEffect, useState } from 'react'
 
 type Props = {
-   openMobileMenu: boolean
+  openMobileMenu: boolean
 }
 
 export const useControlNavbar = ({ openMobileMenu }: Props) => {
-   const [showNavBar, setShowNavBar] = useState('translate-y-0')
-   const [lastScrollY, setLastScrollY] = useState(0)
+  const [showNavBar, setShowNavBar] = useState('translate-y-0')
+  const [lastScrollY, setLastScrollY] = useState(0)
 
-   const controlNavbar = useCallback(() => {
-      if (window.scrollY > 200) {
-         if (window.scrollY > lastScrollY) {
-            setShowNavBar('-translate-y-[80px]')
-         } else {
-            setShowNavBar('shadow-sm')
-         }
+  const controlNavbar = useCallback(() => {
+    if (window.scrollY > 200) {
+      if (window.scrollY > lastScrollY) {
+        setShowNavBar('-translate-y-[80px]')
       } else {
-         setShowNavBar('translate-y-0')
+        setShowNavBar('shadow-sm')
       }
-      setLastScrollY(window.scrollY)
-   }, [lastScrollY])
+    } else {
+      setShowNavBar('translate-y-0')
+    }
+    setLastScrollY(window.scrollY)
+  }, [lastScrollY])
 
-   useEffect(() => {
-      if (openMobileMenu) return
+  useEffect(() => {
+    if (openMobileMenu) return
 
-      window.addEventListener('scroll', controlNavbar)
-      return () => {
-         window.removeEventListener('scroll', controlNavbar)
-      }
-   }, [openMobileMenu, controlNavbar])
+    window.addEventListener('scroll', controlNavbar)
+    return () => {
+      window.removeEventListener('scroll', controlNavbar)
+    }
+  }, [openMobileMenu, controlNavbar])
 
-   return { showNavBar }
+  return { showNavBar }
 }

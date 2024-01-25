@@ -4,25 +4,25 @@ name: Check the source code
 
 # Controls when the action will run.
 on:
-   push:
-      branches: [main]
+  push:
+    branches: [main]
 
-   # Allows you to run this workflow manually from the Actions tab
-   # workflow_dispatch:
+  # Allows you to run this workflow manually from the Actions tab
+  # workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-   # This workflow contains a single job called "build"
-   test:
-      # The type of runner that the job will run on
-      runs-on: ubuntu-latest
+  # This workflow contains a single job called "build"
+  test:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
 
-      # Steps represent a sequence of tasks that will be executed as part of the job
-      steps:
-         - uses: actions/checkout@v3
-         - name: Install packages
-           run: npm ci
-         - name: Testing... 💕
-           run: npm run test
-         - name: Pipe Check Fix 🪁
-           run: npm run pipe:check
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install packages
+        run: npm ci
+      - name: Testing... 💕
+        run: npm run test
+      - name: Pipe Check Fix 🪁
+        run: npm run pipe:check
