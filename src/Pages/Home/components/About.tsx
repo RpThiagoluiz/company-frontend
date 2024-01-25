@@ -17,8 +17,8 @@ export function About() {
     }, [isInView, motionAnimation])
 
     return (
-        <section className="mt-8 md:mt-32 px-8">
-            <div className="flex flex-col-reverse md:flex-row md:h-[25rem] gap-20 my-5">
+        <article className="mt-8 md:mt-32 px-8">
+            <section className="flex flex-col-reverse md:flex-row md:h-[25rem] gap-20 my-5">
                 <img
                     loading="lazy"
                     src={teamImage}
@@ -26,7 +26,7 @@ export function About() {
                     className="taos:translate-x-[200px] taos:opacity-0 hover:-translate-y-2 transition ease-in-out duration-300 hover:drop-shadow-xl mx-auto rounded-lg shadow-lg dark:bg-zinc-900"
                 />
 
-                <div className="flex flex-col gap-12 md:gap-0 justify-around">
+                <section className="flex flex-col gap-12 md:gap-0 justify-around">
                     <motion.h1
                         className="text-3xl md:text-5xl font-bold text-center md:text-left"
                         ref={headingRef}
@@ -64,8 +64,8 @@ export function About() {
                     <Link to="/about">
                         <Button.Outline text="Saiba mais" />
                     </Link>
-                </div>
-            </div>
-        </section>
+                </section>
+            </section>
+        </article>
     )
 }

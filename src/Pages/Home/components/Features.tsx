@@ -43,8 +43,8 @@ const Innovation = () => {
     }, [isInView, motionAnimation])
 
     return (
-        <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
-            <div>
+        <article className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+            <section>
                 <motion.h3
                     ref={triggerRef}
                     className="text-2xl font-bold tracking-tight sm:text-3xl "
@@ -70,7 +70,7 @@ const Innovation = () => {
                     desempenho superior, escalabilidade e segurança, mas também
                     proporcionam uma experiência de usuário excepcional.
                 </motion.p>
-                <div className="mt-12 space-y-12">
+                <section className="mt-12 space-y-12">
                     <motion.div
                         ref={divRef}
                         variants={{
@@ -170,18 +170,17 @@ const Innovation = () => {
                             </p>
                         </div>
                     </motion.div>
-                </div>
-            </div>
-            <div>
-                <div aria-hidden="true" className="mt-10 lg:mt-0">
-                    <img
-                        src={image1}
-                        alt="image1"
-                        className="taos:translate-x-[200px] taos:opacity-0 hover:-translate-y-2 transition ease-in-out duration-300 hover:drop-shadow-xl mx-auto rounded-lg shadow-lg dark:bg-gray-500"
-                    />
-                </div>
-            </div>
-        </div>
+                </section>
+            </section>
+
+            <section aria-hidden="true" className="mt-10 lg:mt-0">
+                <img
+                    src={image1}
+                    alt="image1"
+                    className="taos:translate-x-[200px] taos:opacity-0 hover:-translate-y-2 transition ease-in-out duration-300 hover:drop-shadow-xl mx-auto rounded-lg shadow-lg dark:bg-gray-500"
+                />
+            </section>
+        </article>
     )
 }
 
@@ -198,7 +197,7 @@ const Personalized = () => {
     }, [isInView, motionAnimation])
 
     return (
-        <div className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+        <section className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
             <div className="lg:col-start-2">
                 <h3 className="text-2xl font-bold tracking-tight sm:text-3xl ">
                     Decisões Embasadas em Dados, Soluções Personalizadas e
@@ -341,6 +340,6 @@ const Personalized = () => {
                     className="taos:translate-x-[200px] taos:opacity-0 hover:-translate-y-2 transition ease-in-out duration-300 hover:drop-shadow-xl mx-auto rounded-lg shadow-lg dark:bg-gray-500"
                 />
             </div>
-        </div>
+        </section>
     )
 }
