@@ -4,7 +4,7 @@ export default {
     theme: {
         extend: {
             backgroundImage: {
-                home: 'url("/src/images/backgroundImage.png")',
+                hero: 'url("/src/images/TF/hero.png")',
             },
             dropShadow: {
                 '3xl': '5px 5px 15px rgba(0, 250, 0, 0.75)',
