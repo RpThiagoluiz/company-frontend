@@ -7,7 +7,7 @@ import { useAnimation, useInView, motion } from 'framer-motion'
 
 export function DigitalTransformation() {
   const headingRef = useRef<HTMLHeadingElement | null>(null)
-  const divRef = useRef<HTMLDivElement | null>(null)
+  const liRef = useRef<HTMLLIElement | null>(null)
   const isInView = useInView(headingRef)
   const motionAnimation = useAnimation()
 
@@ -25,9 +25,9 @@ export function DigitalTransformation() {
       >
         Transforme
       </motion.h1>
-      <div className="grid grid-cols-1 gap-x-6 gap-y-16 md:grid-cols-2 xl:grid-cols-3">
-        <motion.section
-          ref={divRef}
+      <ul className="grid grid-cols-1 gap-x-6 gap-y-16 md:grid-cols-2 xl:grid-cols-3">
+        <motion.li
+          ref={liRef}
           variants={{
             hidden: { opacity: 0, scale: 0.25 },
             visible: { opacity: 1, scale: 1 },
@@ -49,10 +49,10 @@ export function DigitalTransformation() {
             Criamos sites de alta qualidade, garantindo uma experiência
             responsiva excepcional para seus usuários.
           </p>
-        </motion.section>
+        </motion.li>
 
-        <motion.section
-          ref={divRef}
+        <motion.li
+          ref={liRef}
           variants={{
             hidden: { opacity: 0, scale: 0.25 },
             visible: { opacity: 1, scale: 1 },
@@ -74,10 +74,10 @@ export function DigitalTransformation() {
             Desenvolvemos soluções móveis eficientes e abrangentes. Em todas as
             plataformas, iOS e Android.
           </p>
-        </motion.section>
+        </motion.li>
 
-        <motion.section
-          ref={divRef}
+        <motion.li
+          ref={liRef}
           variants={{
             hidden: { opacity: 0, scale: 0.25 },
             visible: { opacity: 1, scale: 1 },
@@ -99,10 +99,10 @@ export function DigitalTransformation() {
             Contamos com uma equipe especializada para criar designs envolventes
             e intuitivos, aprimorando a experiência do usuário.
           </p>
-        </motion.section>
+        </motion.li>
 
-        <motion.section
-          ref={divRef}
+        <motion.li
+          ref={liRef}
           variants={{
             hidden: { opacity: 0, scale: 0.25 },
             visible: { opacity: 1, scale: 1 },
@@ -125,10 +125,10 @@ export function DigitalTransformation() {
             de tráfego pago, utilizando ferramentas de ponta como Google Ads,
             Instagram e Facebook ads para impulsionar seu crescimento.
           </p>
-        </motion.section>
+        </motion.li>
 
-        <motion.section
-          ref={divRef}
+        <motion.li
+          ref={liRef}
           variants={{
             hidden: { opacity: 0, scale: 0.25 },
             visible: { opacity: 1, scale: 1 },
@@ -150,8 +150,8 @@ export function DigitalTransformation() {
             Otimizamos sua presença online com estratégias de tráfego orgânico,
             fortalecendo a visibilidade e a reputação da sua empresa.
           </p>
-        </motion.section>
-      </div>
+        </motion.li>
+      </ul>
     </article>
   )
 }

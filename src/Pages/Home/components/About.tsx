@@ -61,7 +61,9 @@ export function About() {
             empresa seja encontrada e se destaque na web.
           </motion.p>
           <Link to="/about">
-            <Button.Outline text="Saiba mais" />
+            <Button.Outline>
+              <span className="text-inherit">Saiba mais</span>
+            </Button.Outline>
           </Link>
         </section>
       </section>
