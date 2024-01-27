@@ -34,7 +34,7 @@ export function Hero() {
     <motion.section
       style={{ opacity, scale }}
       ref={targetRef}
-      className="flex flex-col md:py-20 py-2 items-center gap-5 h-screen"
+      className="flex flex-col md:py-10 py-2 items-center gap-5 h-full"
     >
       <img
         loading="lazy"
