@@ -7,31 +7,54 @@ import logo5 from '../../../images/Features/f5.png'
 import logo6 from '../../../images/Features/f6.png'
 import image1 from '../../../images/Features/fb11.png'
 import image2 from '../../../images/Features/fb22.png'
-import { useAnimation, useInView, motion } from 'framer-motion'
+import {
+  useAnimation,
+  useInView,
+  motion,
+  type AnimationControls,
+} from 'framer-motion'
 
 export function Features() {
   return (
-    <div className="max-w-screen overflow-x-hidden">
-      <section>
-        <div className="container max-w-xl p-6 py-12 mx-auto space-y-24 lg:px-8 lg:max-w-7xl">
-          <div>
-            <h1 className="text-3xl md:text-5xl font-bold  md:ml-5 text-center mb-20">
-              Avance
-            </h1>
-          </div>
-          <Innovation />
-          <div>
-            <Personalized />
-          </div>
-        </div>
-      </section>
-    </div>
+    <main className="max-w-screen overflow-x-hidden">
+      <article className="mx-5 p-6 py-12  space-y-24 lg:px-8 w-full ">
+        <h1 className="text-3xl md:text-5xl font-bold  md:ml-5 text-center mb-20">
+          Avance
+        </h1>
+
+        <Innovation />
+
+        <Personalized />
+      </article>
+    </main>
   )
 }
+
+const CARD_INNOVATION = [
+  {
+    title: 'Soluções Algorítmicas Avançadas',
+    description:
+      'Nossos algoritmos avançados otimizam suas operações, impulsionando eficiência e lucratividade. Tome decisões orientadas por dados.',
+    image: logo1,
+  },
+  {
+    title: 'Integração Tecnológica Inovadoras',
+    description:
+      'Integração de forma contínua tecnologias de ponta como IA, IoT e computação em nuvem. Automatize tarefas, melhore a comunicação e desbloqueie o potencial de crescimento.',
+    image: logo2,
+  },
+  {
+    title: 'Suporte de Pessoal Treinado',
+    description:
+      'Especialistas treinados garantem implementação tranquila e orientação contínua. Aproveite efetivamente nosso software com assistência personalizada.',
+    image: logo3,
+  },
+]
 
 const Innovation = () => {
   const triggerRef = useRef<HTMLHeadingElement | null>(null)
   const divRef = useRef<HTMLDivElement | null>(null)
+  const imgRef = useRef<HTMLImageElement | null>(null)
   const paragraphRef = useRef<HTMLParagraphElement | null>(null)
   const isInView = useInView(triggerRef)
   const motionAnimation = useAnimation()
@@ -70,108 +93,55 @@ const Innovation = () => {
           segurança, mas também proporcionam uma experiência de usuário
           excepcional.
         </motion.p>
-        <section className="mt-12 space-y-12">
-          <motion.div
-            ref={divRef}
-            variants={{
-              hidden: { opacity: 0, x: 75 },
-              visible: { opacity: 1, x: 0 },
-            }}
-            initial="hidden"
-            animate={motionAnimation}
-            transition={{ duration: 1.25, delay: 0.75 }}
-            aria-hidden="true"
-            className="flex"
-          >
-            <div className="flex-shrink-0">
-              <div className="flex items-center justify-center w-12 h-12 rounded-md dark:text-gray-900">
-                <img src={logo1} alt="logo1" className="drop-shadow-black" />
-              </div>
-            </div>
-            <div className="ml-4">
-              <h4 className="text-lg font-medium leading-6 ">
-                Soluções Algorítmicas Avançadas
-              </h4>
-              <p className="mt-2 ">
-                Nossos algoritmos avançados otimizam suas operações,
-                impulsionando eficiência e lucratividade. Tome decisões
-                orientadas por dados.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            ref={divRef}
-            variants={{
-              hidden: { opacity: 0, x: 75 },
-              visible: { opacity: 1, x: 0 },
-            }}
-            initial="hidden"
-            animate={motionAnimation}
-            transition={{ duration: 1.35, delay: 0.85 }}
-            aria-hidden="true"
-            className="flex"
-          >
-            <div className="flex-shrink-0">
-              <div className="flex items-center justify-center w-12 h-12 rounded-md  dark:text-gray-900">
-                <img src={logo2} alt="logo2" className="drop-shadow-black" />
-              </div>
-            </div>
-            <div className="ml-4">
-              <h4 className="text-lg font-medium leading-6 ">
-                Integração Tecnológica Inovadora
-              </h4>
-              <p className="mt-2 ">
-                Integração de forma contínua tecnologias de ponta como IA, IoT e
-                computação em nuvem. Automatize tarefas, melhore a comunicação e
-                desbloqueie o potencial de crescimento.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            ref={divRef}
-            variants={{
-              hidden: { opacity: 0, x: 75 },
-              visible: { opacity: 1, x: 0 },
-            }}
-            initial="hidden"
-            animate={motionAnimation}
-            transition={{ duration: 1.45, delay: 0.95 }}
-            aria-hidden="true"
-            className="flex"
-          >
-            <div className="flex-shrink-0">
-              <div className="flex items-center justify-center w-12 h-12 rounded-md  dark:text-gray-900">
-                <img src={logo3} alt="logo3" className="drop-shadow-black" />
-              </div>
-            </div>
-            <div className="ml-4">
-              <h4 className="text-lg font-medium leading-6 ">
-                Suporte de Pessoal Treinado
-              </h4>
-              <p className="mt-2 ">
-                Especialistas treinados garantem implementação tranquila e
-                orientação contínua. Aproveite efetivamente nosso software com
-                assistência personalizada.
-              </p>
-            </div>
-          </motion.div>
-        </section>
+        <ol className="mt-12 space-y-12 relative border-s-2 border-dashed  border-opacity-70 border-gray-200 dark:border-zinc-400">
+          {CARD_INNOVATION.map((el) => (
+            <Card
+              key={el.title}
+              imgRef={imgRef}
+              divRef={divRef}
+              motionAnimation={motionAnimation}
+              info={el}
+            />
+          ))}
+        </ol>
       </section>
 
       <section aria-hidden="true" className="mt-10 lg:mt-0">
         <img
           src={image1}
           alt="image1"
-          className="taos:translate-x-[200px] taos:opacity-0 hover:-translate-y-2 transition ease-in-out duration-300 hover:drop-shadow-xl mx-auto rounded-lg shadow-lg dark:bg-gray-500"
+          className="hidden md:block taos:translate-x-[200px] taos:opacity-0 hover:-translate-y-2 transition ease-in-out duration-300 hover:drop-shadow-xl mx-auto rounded-lg shadow-lg dark:bg-gray-500"
         />
       </section>
     </article>
   )
 }
 
+const CARD_PERSONALIZED = [
+  {
+    title: 'Capacidades Poderosas de Análise',
+    description:
+      ' Especialistas em serviços de otimização para motores de busca (SEO) e publicidade digital, oferecemos soluções integradas para elevar a visibilidade online. Utilizando estratégias de SEO, Google Ads, Facebook Ads e Instagram, garantimos uma presença digital otimizada, aumentando a relevância nos motores de busca, alcançando instantaneamente o público-alvo e expandindo a presença nas redes sociais. Nossa abordagem integrada impulsiona o engajamento, a conversão e o crescimento sustentável para os negócios de nossos clientes.',
+    image: logo4,
+  },
+  {
+    title: 'Soluções Personalizadas',
+    description:
+      'Desenvolvemos soluções de software personalizadas, sob medida para atender às suas necessidades exclusivas. Alcance um crescimento sustentável alinhado aos seus objetivos comerciais',
+    image: logo5,
+  },
+  {
+    title: 'Inovação Contínua',
+    description:
+      ' Mantenha-se à frente com as últimas características e funcionalidades, garantindo sua relevância no mercado dinâmico. Adapte-se às mudanças nos motores de busca e conquiste uma vantagem competitiva através da inovação contínua.',
+    image: logo6,
+  },
+]
+
 const Personalized = () => {
   const triggerRef = useRef<HTMLParagraphElement | null>(null)
   const divRef = useRef<HTMLDivElement | null>(null)
+  const imgRef = useRef<HTMLImageElement | null>(null)
   const isInView = useInView(triggerRef)
   const motionAnimation = useAnimation()
 
@@ -183,6 +153,13 @@ const Personalized = () => {
 
   return (
     <section className="grid lg:gap-8 lg:grid-cols-2 lg:items-center">
+      <div className="mt-[-50px] lg:mt-[-200px] ">
+        <img
+          src={image2}
+          alt="image2"
+          className="hidden md:block taos:translate-x-[200px] taos:opacity-0 hover:-translate-y-2 transition ease-in-out duration-300 hover:drop-shadow-xl mx-auto rounded-lg shadow-lg dark:bg-gray-500"
+        />
+      </div>
       <div className="lg:col-start-2">
         <h3 className="text-2xl font-bold tracking-tight sm:text-3xl ">
           Decisões Embasadas em Dados, Soluções Personalizadas e Otimização para
@@ -195,116 +172,70 @@ const Personalized = () => {
           suas necessidades, preparando o terreno para o futuro com nosso
           compromisso inabalável com a inovação.
         </motion.p>
-        <div className="mt-12 space-y-12">
-          <motion.div
-            ref={divRef}
-            variants={{
-              hidden: { opacity: 0, x: 75 },
-              visible: { opacity: 1, x: 0 },
-            }}
-            initial="hidden"
-            animate={motionAnimation}
-            transition={{
-              duration: 1.25,
-              delay: 0.75,
-            }}
-            aria-hidden="true"
-            className="flex"
-          >
-            <div className="flex-shrink-0">
-              <div className="flex items-center justify-center w-12 h-12 rounded-md  dark:text-gray-900">
-                <img src={logo4} alt="logo4" className="drop-shadow-black" />
-              </div>
-            </div>
-            <div className="ml-4">
-              <h4 className="text-lg font-medium leading-6 ">
-                Capacidades Poderosas de Análise
-              </h4>
-              <p className="mt-2 ">
-                Especialistas em serviços de otimização para motores de busca
-                (SEO) e publicidade digital, oferecemos soluções integradas para
-                elevar a visibilidade online. Utilizando estratégias de SEO,
-                Google Ads, Facebook Ads e Instagram, garantimos uma presença
-                digital otimizada, aumentando a relevância nos motores de busca,
-                alcançando instantaneamente o público-alvo e expandindo a
-                presença nas redes sociais. Nossa abordagem integrada impulsiona
-                o engajamento, a conversão e o crescimento sustentável para os
-                negócios de nossos clientes.
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            ref={divRef}
-            variants={{
-              hidden: { opacity: 0, x: 75 },
-              visible: { opacity: 1, x: 0 },
-            }}
-            initial="hidden"
-            animate={motionAnimation}
-            transition={{
-              duration: 1.35,
-              delay: 0.85,
-            }}
-            aria-hidden="true"
-            className="flex"
-          >
-            <div className="flex-shrink-0">
-              <div className="flex items-center justify-center w-12 h-12 rounded-md  dark:text-gray-900">
-                <img src={logo5} alt="logo5" className="drop-shadow-black" />
-              </div>
-            </div>
-            <div className="ml-4">
-              <h4 className="text-lg font-medium leading-6 ">
-                Soluções Personalizadas
-              </h4>
-              <p className="mt-2 ">
-                Desenvolvemos soluções de software personalizadas, sob medida
-                para atender às suas necessidades exclusivas. Alcance um
-                crescimento sustentável alinhado aos seus objetivos comerciais
-              </p>
-            </div>
-          </motion.div>
-          <motion.div
-            ref={divRef}
-            variants={{
-              hidden: { opacity: 0, x: 75 },
-              visible: { opacity: 1, x: 0 },
-            }}
-            initial="hidden"
-            animate={motionAnimation}
-            transition={{
-              duration: 1.45,
-              delay: 0.95,
-            }}
-            aria-hidden="true"
-            className="flex"
-          >
-            <div className="flex-shrink-0">
-              <div className="flex items-center justify-center w-12 h-12 rounded-md  dark:text-gray-900">
-                <img src={logo6} alt="logo6" className="drop-shadow-black" />
-              </div>
-            </div>
-            <div className="ml-4">
-              <h4 className="text-lg font-medium leading-6 ">
-                Inovação Contínua
-              </h4>
-              <p className="mt-2 ">
-                Mantenha-se à frente com as últimas características e
-                funcionalidades, garantindo sua relevância no mercado dinâmico.
-                Adapte-se às mudanças nos motores de busca e conquiste uma
-                vantagem competitiva através da inovação contínua.
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </div>
-      <div className="mt-10 lg:mt-0 lg:col-start-1 lg:row-start-1">
-        <img
-          src={image2}
-          alt="image2"
-          className="taos:translate-x-[200px] taos:opacity-0 hover:-translate-y-2 transition ease-in-out duration-300 hover:drop-shadow-xl mx-auto rounded-lg shadow-lg dark:bg-gray-500"
-        />
+        <ol className="mt-12 space-y-12 relative border-s-2 border-dashed  border-opacity-70 border-gray-200 dark:border-zinc-400">
+          {CARD_PERSONALIZED.map((el) => (
+            <Card
+              key={el.title}
+              divRef={divRef}
+              imgRef={imgRef}
+              motionAnimation={motionAnimation}
+              info={el}
+            />
+          ))}
+        </ol>
       </div>
     </section>
+  )
+}
+
+const Card = ({
+  divRef,
+  imgRef,
+  motionAnimation,
+  info,
+}: {
+  divRef?: React.Ref<HTMLDivElement>
+  imgRef?: React.Ref<HTMLImageElement>
+  motionAnimation: AnimationControls
+  info: {
+    title: string
+    description: string
+    image: string
+  }
+}) => {
+  return (
+    <li className="flex ms-6">
+      <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-4 ring-white dark:ring-gray-200 dark:bg-zinc-700 drop-shadow-black">
+        <motion.img
+          ref={imgRef}
+          variants={{
+            hidden: { opacity: 0, scale: 0.25 },
+            visible: { opacity: 1, scale: 1 },
+          }}
+          initial="hidden"
+          aria-hidden="true"
+          animate={motionAnimation}
+          transition={{ duration: 0.75, delay: 0.5 }}
+          src={info.image}
+          alt="logo1"
+          className="drop-shadow-black"
+        />
+      </span>
+      <motion.section
+        ref={divRef}
+        variants={{
+          hidden: { opacity: 0, x: 75 },
+          visible: { opacity: 1, x: 0 },
+        }}
+        initial="hidden"
+        animate={motionAnimation}
+        transition={{ duration: 1.25, delay: 0.75 }}
+        aria-hidden="true"
+        className="ml-4"
+      >
+        <h4 className="text-lg font-medium leading-6 ">{info.title}</h4>
+        <p className="mt-2 ">{info.description}</p>
+      </motion.section>
+    </li>
   )
 }

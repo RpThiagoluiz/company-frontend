@@ -17,11 +17,11 @@ export function Home() {
     <main className=" bg-stone-100 overflow-x-hidden">
       <Hero />
       <About />
-      <Divider.HorizontalLeft extraStyles="my-[6rem]" />
+      <Divider.HorizontalLeft extraStyles="my-[3rem]" />
       <Features />
       <TechsCarousel extraStyles="my-20" />
 
-      <Divider.HorizontalLeft extraStyles="my-[6rem]" />
+      <Divider.HorizontalLeft extraStyles="my-[3rem]" />
 
       <DigitalTransformation />
 
@@ -37,6 +37,7 @@ export function Home() {
       <article className=" h-svh flex items-center justify-center">
         <p className="text-3xl md:text-5xl font-bold ">
           Projetos terminados e experiencia
+          'https://flowbite.com/docs/components/device-mockups/'
         </p>
       </article>
 
