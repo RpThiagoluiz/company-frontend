@@ -94,13 +94,14 @@ const Innovation = () => {
           excepcional.
         </motion.p>
         <ol className="mt-12 space-y-12 relative border-s-2 border-dashed  border-opacity-70 border-gray-200 dark:border-zinc-400">
-          {CARD_INNOVATION.map((el) => (
+          {CARD_INNOVATION.map((el, index) => (
             <Card
               key={el.title}
               imgRef={imgRef}
               divRef={divRef}
               motionAnimation={motionAnimation}
               info={el}
+              animationDelay={index / 2 + 0.5}
             />
           ))}
         </ol>
@@ -173,13 +174,14 @@ const Personalized = () => {
           compromisso inabalável com a inovação.
         </motion.p>
         <ol className="mt-12 space-y-12 relative border-s-2 border-dashed  border-opacity-70 border-gray-200 dark:border-zinc-400">
-          {CARD_PERSONALIZED.map((el) => (
+          {CARD_PERSONALIZED.map((el, index) => (
             <Card
               key={el.title}
               divRef={divRef}
               imgRef={imgRef}
               motionAnimation={motionAnimation}
               info={el}
+              animationDelay={index / 2 + 0.5}
             />
           ))}
         </ol>
@@ -191,12 +193,14 @@ const Personalized = () => {
 const Card = ({
   divRef,
   imgRef,
+  animationDelay,
   motionAnimation,
   info,
 }: {
   divRef?: React.Ref<HTMLDivElement>
   imgRef?: React.Ref<HTMLImageElement>
   motionAnimation: AnimationControls
+  animationDelay?: number
   info: {
     title: string
     description: string
@@ -229,7 +233,7 @@ const Card = ({
         }}
         initial="hidden"
         animate={motionAnimation}
-        transition={{ duration: 1.25, delay: 0.75 }}
+        transition={{ duration: 1.25, delay: animationDelay ?? 0.75 }}
         aria-hidden="true"
         className="ml-4"
       >

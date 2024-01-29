@@ -65,12 +65,13 @@ export function DigitalTransformation() {
         Transforme
       </motion.h1>
       <ul className="grid grid-cols-1 gap-x-6 gap-y-16 md:grid-cols-2 xl:grid-cols-3">
-        {CARDS_INFO.map((el) => (
+        {CARDS_INFO.map((el, index) => (
           <Card
             key={el.title}
             ref={liRef}
             motionAnimation={motionAnimation}
             info={el}
+            animationDelay={index / 4 + 0.25}
           />
         ))}
       </ul>
@@ -81,10 +82,12 @@ export function DigitalTransformation() {
 const Card = ({
   ref,
   motionAnimation,
+  animationDelay,
   info,
 }: {
   ref?: React.Ref<HTMLLIElement>
   motionAnimation: AnimationControls
+  animationDelay?: number
   info: {
     title: string
     description: string
@@ -101,7 +104,7 @@ const Card = ({
       initial="hidden"
       aria-hidden="true"
       animate={motionAnimation}
-      transition={{ duration: 0.75, delay: 0.5 }}
+      transition={{ duration: 0.75, delay: animationDelay ?? 0.5 }}
       className="group flex flex-col justify-around rounded-xl bg-slate-100  p-5 min-h-[20rem]"
     >
       <div className="flex items-center gap-7">
