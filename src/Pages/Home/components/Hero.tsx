@@ -40,7 +40,7 @@ export function Hero() {
         loading="lazy"
         src={heroImage}
         alt="hero"
-        className="w-[280px]  rounded-l-[20%] rounded-br-[6%]  drop-shadow-3xl mt-20"
+        className="w-[280px]  rounded-l-[20%] rounded-br-[6%]  drop-shadow-green mt-20"
       />
 
       <h3 className="pt-5 text-center text-3xl md:text-5xl font-bold ">

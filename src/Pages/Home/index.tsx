@@ -17,7 +17,7 @@ export function Home() {
     <main className=" bg-stone-100 overflow-x-hidden">
       <Hero />
       <About />
-      <Divider.HorizontalLeft extraStyles="my-[3rem]" />
+
       <Features />
       <TechsCarousel extraStyles="my-20" />
 
@@ -36,7 +36,8 @@ export function Home() {
 
       <article className=" h-svh flex items-center justify-center">
         <p className="text-3xl md:text-5xl font-bold ">
-          Projetos terminados e experiencia
+          Projetos terminados e experiencia Dashboard, landing pages, e-comerce,
+          catalogos, aplicativos
           'https://flowbite.com/docs/components/device-mockups/'
         </p>
       </article>
@@ -66,6 +67,10 @@ export function Home() {
 
           <img src={contactImage} alt="" className="w-1/3 h-[360px]" />
         </section>
+      </article>
+
+      <article className="bg-zinc-800 flex items-center justify-center h-96">
+        <h2>test</h2>
       </article>
     </main>
   )

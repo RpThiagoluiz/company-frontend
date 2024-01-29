@@ -28,7 +28,7 @@ export function Navbar() {
           <img
             src={Icon}
             alt="icon"
-            className="h-[35px] w-[35px] hidden sm:flex drop-shadow-3xl "
+            className="h-[35px] w-[35px] hidden sm:flex drop-shadow-green "
           />
           <span className="ml-2 mt-2 sm:mt-0 text-black font-semibold text-xl">
             TF Solutions

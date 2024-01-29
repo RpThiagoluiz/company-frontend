@@ -108,7 +108,7 @@ const Card = ({
       className="group flex flex-col justify-around rounded-xl bg-slate-100  p-5 min-h-[20rem]"
     >
       <div className="flex items-center gap-7">
-        <info.icon className="text-6xl text-green-500 drop-shadow-3xl group-hover:scale-125 transition ease-in-out delay-150" />
+        <info.icon className="text-6xl text-green-500 drop-shadow-green group-hover:scale-125 transition ease-in-out delay-150" />
         <h3 className="text-2xl  strong font-semibold">{info.title}</h3>
       </div>
 
