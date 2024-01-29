@@ -17,7 +17,7 @@ export function About() {
   }, [isInView, motionAnimation])
 
   return (
-    <article className="mt-8 md:mt-32 p-8 clip-path-ellipse">
+    <article className="mt-8 md:mt-32 p-8 clip-path-polygon">
       <section className="flex flex-col-reverse md:flex-row md:h-[32rem] gap-20 my-5">
         <img
           loading="lazy"

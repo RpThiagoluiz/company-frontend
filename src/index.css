@@ -2,24 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: 'Poppins', 'sans-serif';
-}
-
-@layer base {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    @apply text-slate-700;
-  }
-  p,
-  span {
-    @apply text-slate-400;
-  }
-}
-
 :root {
   --primary: #4ade80;
   --secondary: #d6d3d1;
@@ -59,4 +41,46 @@ html {
   -webkit-box-shadow: 50px 50px 10px var(--primary);
   -moz-box-shadow: 50px 50px 10px var(--primary);
   box-shadow: 50px 50px 10px var(--primary);
+}
+
+body {
+  font-family: 'Poppins', 'sans-serif';
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply text-slate-700;
+  }
+  p,
+  span {
+    @apply text-slate-400;
+  }
+}
+
+@layer utilities {
+  /* .clip-path-polygon {
+    clip-path: ellipse(130vw 100vw at 50vw 100vw);
+  } */
+
+  .clip-path-polygon {
+    position: relative;
+    @apply bg-zinc-700;
+  }
+
+  .clip-path-polygon::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    z-index: 1;
+    @apply bg-zinc-100;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+    /* clip-path: ellipse(130vw 100vw at 50vw 100vw); */
+  }
 }
