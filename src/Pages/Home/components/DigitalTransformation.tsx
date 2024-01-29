@@ -57,7 +57,7 @@ export function DigitalTransformation() {
   }, [isInView, motionAnimation])
 
   return (
-    <article className="p-8 md:p-24 m-20 bg-zinc-700 rounded-2xl">
+    <article className="p-8 md:p-24 m-5 md:m-20 bg-zinc-700 rounded-2xl">
       <motion.h1
         ref={headingRef}
         className="text-3xl text-white md:text-5xl font-bold md:ml-5 text-center mb-28"
