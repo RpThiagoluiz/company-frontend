@@ -9,7 +9,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 
 export function Footer() {
   return (
-    <footer className="bg-stone-100 md:grid md:grid-cols-3 flex flex-col-reverse h-[40svh] w-full">
+    <footer className="bg-stone-100 md:grid md:grid-cols-3 flex flex-col-reverse min-h-[40svh] w-full">
       <article className="col-span-2">
         <section className="bg-white flex flex-col xl:grid xl:grid-cols-3  xl:gap-0 2xl:gap-6 2xl:grid-cols-3  2xl:p-12 lg:p-6 p-4">
           <div className="flex lg:mb-8 mb-2">
