@@ -4,9 +4,12 @@ import { Navbar } from '@components/Navbar'
 import { routes } from './registerRoutes'
 
 import { Footer } from '@/components/Footer'
+import { ScrollToTop } from '@/hooks/useScrollToTop'
 export function AppRoutes() {
   return (
     <BrowserRouter>
+      {/* TODO: Remover esse scroll, não permitir esse comportamento. */}
+      <ScrollToTop />
       <Navbar />
       <Routes>
         {React.Children.toArray(
