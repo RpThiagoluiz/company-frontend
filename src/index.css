@@ -81,6 +81,20 @@ body {
     z-index: 1;
     @apply bg-zinc-100;
     clip-path: polygon(0 0, 0 100%, 100% 100%);
-    /* clip-path: ellipse(130vw 100vw at 50vw 100vw); */
+  }
+
+  .clip-path-dialog {
+    position: relative;
+    border-radius: 15% 10%;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 84%,
+      75% 84%,
+      75% 100%,
+      46% 85%,
+      0 84%
+    );
+    @apply bg-zinc-700;
   }
 }
