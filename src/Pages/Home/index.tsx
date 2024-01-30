@@ -9,6 +9,7 @@ import { DigitalTransformation } from './components/DigitalTransformation'
 
 import { useRef } from 'react'
 import { ContactUs } from './components/ContactUs'
+import { SpeedUpNow } from './components/SpeedUpNow'
 
 export function Home() {
   const contactFormRef = useRef<HTMLDivElement | null>(null)
@@ -68,10 +69,7 @@ export function Home() {
           <img src={contactImage} alt="" className="w-1/3 h-[360px]" />
         </section>
       </article>
-
-      <article className="bg-zinc-800 flex items-center justify-center h-96">
-        <h2>test</h2>
-      </article>
+      <SpeedUpNow />
     </main>
   )
 }
