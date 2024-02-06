@@ -62,9 +62,44 @@ body {
 }
 
 @layer utilities {
-  /* .clip-path-polygon {
-    clip-path: ellipse(130vw 100vw at 50vw 100vw);
-  } */
+  .clip-path-ellipse {
+    position: relative;
+    height: 540px;
+    @apply bg-zinc-700;
+  }
+
+  .clip-path-ellipse::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 110px;
+    z-index: 1;
+    @apply bg-stone-100;
+    /* clip-path: ellipse(150vw 100vw at 50vw 100vw);
+     */
+
+    clip-path: ellipse(60% 100% at 50% 100%);
+  }
+
+  .clip-path-reverse-ellipse {
+    position: relative;
+    height: 540px;
+    @apply bg-zinc-700;
+  }
+
+  .clip-path-reverse-ellipse::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 110px;
+    z-index: 1;
+    @apply bg-stone-100;
+    clip-path: ellipse(60% 100% at 50% 0%);
+  }
 
   .clip-path-polygon {
     position: relative;
