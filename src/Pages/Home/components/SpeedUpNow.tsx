@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button'
 import { Link } from 'react-router-dom'
-import image1 from '../../../images/Features/fb11.png'
+import image1 from '../../../images/TF/Features/fb11.png'
 
 export function SpeedUpNow() {
   return (
