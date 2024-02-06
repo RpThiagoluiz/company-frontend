@@ -41,6 +41,7 @@ export function About() {
             aria-hidden="true"
           >
             Sobre nós
+            <span className="text-green-600">.</span>
           </motion.h1>
           <motion.p
             ref={paragraphRef}

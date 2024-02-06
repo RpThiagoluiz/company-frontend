@@ -63,6 +63,7 @@ export function DigitalTransformation() {
         className="text-3xl text-white md:text-5xl font-bold md:ml-5 text-center mb-28"
       >
         Transforme
+        <span className="text-green-600">.</span>
       </motion.h1>
       <ul className="grid grid-cols-1 gap-x-6 gap-y-16 md:grid-cols-2 xl:grid-cols-3">
         {CARDS_INFO.map((el, index) => (

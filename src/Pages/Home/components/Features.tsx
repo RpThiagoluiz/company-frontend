@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react'
-import logo1 from '../../../images/Features/f1.png'
-import logo2 from '../../../images/Features/f2.png'
-import logo3 from '../../../images/Features/f3.png'
-import logo4 from '../../../images/Features/f4.png'
-import logo5 from '../../../images/Features/f5.png'
-import logo6 from '../../../images/Features/f6.png'
-import image1 from '../../../images/Features/fb11.png'
-import image2 from '../../../images/Features/fb22.png'
+import logo1 from '../../../images/TF/Features/f1.png'
+import logo2 from '../../../images/TF/Features/f2.png'
+import logo3 from '../../../images/TF/Features/f3.png'
+import logo4 from '../../../images/TF/Features/f4.png'
+import logo5 from '../../../images/TF/Features/f5.png'
+import logo6 from '../../../images/TF/Features/f6.png'
+import image1 from '../../../images/TF/Features/fb11.png'
+import image2 from '../../../images/TF/Features/fb22.png'
 import {
   useAnimation,
   useInView,
@@ -20,6 +20,7 @@ export function Features() {
       <article className="mx-5 p-6 py-12  space-y-24 lg:px-8 w-full ">
         <h1 className="text-3xl md:text-5xl font-bold  md:ml-5 text-center mb-20">
           Avance
+          <span className="text-green-600">.</span>
         </h1>
 
         <Innovation />
