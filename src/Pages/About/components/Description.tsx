@@ -1,7 +1,7 @@
 export function Description() {
   return (
-    <section className="p-20 mt-20 grid grid-cols-3 gap-14">
-      <p className="col-span-2 text-zinc-700 text-xl px-60 leading-8 tracking-wider">
+    <section className="p-20 mt-20 flex flex-col justify-center items-center 2xl:grid 2xl:grid-cols-3 gap-14">
+      <p className="2xl:col-span-2 text-zinc-700 text-md 2xl:text-xl 2xl:px-60 2xl:leading-8 2xl:tracking-wider">
         A <span className="text-green-600 font-bold">TF Soluções</span> é uma
         potência tecnológica de destaque, especializada em transformações
         digitais completas e estratégias de crescimento de equipe. Oferecemos

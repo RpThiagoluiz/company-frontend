@@ -6,15 +6,15 @@ import appStoreIcon from '../../../images/TF/techs/app-store-colored.svg'
 
 export function Cloud() {
   return (
-    <article className="h-3/4 w-full clip-path-reverse-ellipse px-20">
-      <section className="py-40">
+    <article className="h-3/4 w-full clip-path-reverse-ellipse xl:px-20 p-5">
+      <section className="xl:py-40 p-5">
         <h1 className="text-left leading-10 tracking-wider text-3xl font-bold text-white">
           Hospedagem
           <span className="text-green-600 font-bold text-3xl">.</span>
         </h1>
 
-        <section className="grid grid-cols-2 items-center justify-around mt-16">
-          <div className="flex flex-row items-center justify-evenly gap-20 flex-wrap ">
+        <section className="2xl:grid 2xl:grid-cols-2 flex flex-col gap-5 items-center justify-around mt-16">
+          <div className="flex flex-row items-center justify-evenly xl:gap-20 gap-10 flex-wrap ">
             <div className="flex flex-col items-center">
               <img
                 loading="lazy"
@@ -50,7 +50,7 @@ export function Cloud() {
               <img
                 loading="lazy"
                 src={appStoreIcon}
-                className="w-24 h-24 max-w-none  drop-shadow-black"
+                className="w-24 h-24 max-w-none drop-shadow-black"
                 alt="apple app store logo"
               />
               <span className="mt-2">Apple store</span>
@@ -67,8 +67,8 @@ export function Cloud() {
             </div>
           </div>
 
-          <div className="px-5 py-3 pb-6 border-l border-solid border-green-700 ">
-            <p className="text-white leading-8 tracking-wider">
+          <div className="px-5 py-3 xl:pb-6 xl:border-l xl:border-t-0 border-t border-solid border-green-700">
+            <p className="text-white leading-8 tracking-wider text-md">
               Excelência tecnológica, escolhemos as plataformas líderes do
               setor, Google Cloud, AWS e Azure, para hospedar nossos serviços e
               aplicativos. Com o Google Cloud, desfrutamos de uma infraestrutura
