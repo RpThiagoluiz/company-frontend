@@ -22,7 +22,7 @@ export function Cloud() {
                 className="w-24 h-24 max-w-none"
                 alt="AWS logo"
               />
-              <span className="mt-2">AWS services</span>
+              <span className="mt-2">Amazon Web Services</span>
             </div>
 
             <div className="flex flex-col items-center">
