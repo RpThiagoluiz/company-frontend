@@ -1,7 +1,21 @@
+import { Header } from './components/Header'
+import { Description } from './components/Description'
+import { Team } from './components/Team'
+import { Cloud } from './components/Cloud'
+
 export function About() {
   return (
-    <div className="flex h-screen justify-center items-center  bg-blue-900">
-      <h1 className="text-3xl font-bold">ABOUT</h1>
-    </div>
+    <main className="min-h-screen bg-stone-100 ">
+      <Header />
+      <Description />
+      <Team />
+      <Cloud />
+
+      <section className="h-screen w-full flex items-center justify-center">
+        <span>
+          form que vai ter em todas as paginas que não forem home e contato
+        </span>
+      </section>
+    </main>
   )
 }
