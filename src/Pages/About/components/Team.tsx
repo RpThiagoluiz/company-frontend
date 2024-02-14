@@ -2,7 +2,7 @@ import qaTeamImage from '../../../images/TF/team/qa-team.jpg'
 import poTeamImage from '../../../images/TF/team/po-team.jpg'
 import devTeamImage from '../../../images/TF/team/developer-team.jpg'
 import uiTeamImage from '../../../images/TF/team/ui-team.jpg'
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import {
   useAnimation,
   useInView,
@@ -87,29 +87,33 @@ export function Team() {
   )
 }
 
-const Member = (props: {
-  src: string
-  label: string
-  name: string
-  extraStyles?: string
-  ref: React.Ref<HTMLImageElement>
-  motionAnimation: AnimationControls
-}) => (
-  <div className={`p-5 flex flex-col items-center ${props.extraStyles}`}>
-    <motion.img
-      ref={props.ref}
-      initial="hidden"
-      aria-hidden="true"
-      animate={props.motionAnimation}
-      transition={{ duration: 1.25, delay: 0.5 }}
-      src={props.src}
-      alt={props.label}
-      className="rounded-full w-[156px] h-[156px]"
-      variants={{
-        hidden: { opacity: 0, y: -75 },
-        visible: { opacity: 1, y: 0 },
-      }}
-    />
-    <h4 className="text-zinc-400 mt-5">{props.name}</h4>
-  </div>
+const Member = React.forwardRef(
+  (
+    props: {
+      src: string
+      label: string
+      name: string
+      extraStyles?: string
+      motionAnimation: AnimationControls
+    },
+    ref: React.Ref<HTMLImageElement>,
+  ) => (
+    <div className={`p-5 flex flex-col items-center ${props.extraStyles}`}>
+      <motion.img
+        ref={ref}
+        initial="hidden"
+        aria-hidden="true"
+        animate={props.motionAnimation}
+        transition={{ duration: 1.25, delay: 0.5 }}
+        src={props.src}
+        alt={props.label}
+        className="rounded-full w-[156px] h-[156px]"
+        variants={{
+          hidden: { opacity: 0, y: -75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+      />
+      <h4 className="text-zinc-400 mt-5">{props.name}</h4>
+    </div>
+  ),
 )

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import logo1 from '../../../images/TF/Features/f1.png'
 import logo2 from '../../../images/TF/Features/f2.png'
 import logo3 from '../../../images/TF/Features/f3.png'
@@ -226,21 +226,45 @@ const Card = ({
           className="drop-shadow-black"
         />
       </span>
-      <motion.section
+      <ImageDescription
         ref={divRef}
+        info={info}
+        motionAnimation={motionAnimation}
+        animationDelay={animationDelay}
+      />
+    </li>
+  )
+}
+
+const ImageDescription = React.forwardRef(
+  (
+    props: {
+      motionAnimation: AnimationControls
+      animationDelay?: number
+      info: {
+        title: string
+        description: string
+        image: string
+      }
+    },
+    ref: React.Ref<HTMLDivElement>,
+  ) => {
+    return (
+      <motion.section
+        ref={ref}
         variants={{
           hidden: { opacity: 0, x: 75 },
           visible: { opacity: 1, x: 0 },
         }}
         initial="hidden"
-        animate={motionAnimation}
-        transition={{ duration: 1.25, delay: animationDelay ?? 0.75 }}
+        animate={props.motionAnimation}
+        transition={{ duration: 1.25, delay: props.animationDelay ?? 0.75 }}
         aria-hidden="true"
         className="ml-4"
       >
-        <h4 className="text-lg font-medium leading-6 ">{info.title}</h4>
-        <p className="mt-2 ">{info.description}</p>
+        <h4 className="text-lg font-medium leading-6 ">{props.info.title}</h4>
+        <p className="mt-2 ">{props.info.description}</p>
       </motion.section>
-    </li>
-  )
-}
+    )
+  },
+)

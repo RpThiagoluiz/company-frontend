@@ -8,7 +8,7 @@ import { SpeedUpNow } from './components/SpeedUpNow'
 
 export function Home() {
   return (
-    <main className=" bg-stone-100 overflow-x-hidden">
+    <main className="bg-stone-100 overflow-x-hidden">
       <Hero />
       <About />
       <Features />
