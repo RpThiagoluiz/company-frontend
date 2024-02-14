@@ -1,7 +1,18 @@
+import { Header } from './components/Header'
+import { Solutions } from './components/Solutions'
+
+//Metodologias
+// Agile - fla um pouco dela
+// Desenvolvimento remoto
+// suporte 24h
+// tecnologias para seu negocio
+
 export function Services() {
   return (
-    <div className="flex h-screen justify-center items-center  bg-gray-400">
-      <h1 className="text-3xl font-bold">Services</h1>
-    </div>
+    <main className="bg-stone-100 min-h-screen">
+      <Header />
+      <Solutions />
+      <section className="min-h-screen"></section>
+    </main>
   )
 }
