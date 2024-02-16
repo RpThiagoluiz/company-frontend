@@ -1,0 +1,3 @@
+- Revisar textos
+- Animações
+- Responsividade
