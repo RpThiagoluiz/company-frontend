@@ -11,8 +11,8 @@ export function About() {
       <Team />
       <Cloud />
 
-      <section className="h-screen w-full flex items-center justify-center">
-        <span>
+      <section className="h-screen w-full flex items-center justify-center bg-red-400">
+        <span className="text-zinc-900">
           form que vai ter em todas as paginas que não forem home e contato
         </span>
       </section>
