@@ -15,6 +15,7 @@ import storybookIcon from '../../../images/TF/techs/storybook.svg'
 import styledIcon from '../../../images/TF/techs/styled.svg'
 import tailwindIcon from '../../../images/TF/techs/tailwind.svg'
 import typescriptIcon from '../../../images/TF/techs/typescript.svg'
+import flutterIcon from '../../../images/TF/techs/flutter.svg'
 
 const ICONS = [
   { src: awsIcon, alt: 'aws icon' },
@@ -32,6 +33,7 @@ const ICONS = [
     src: angularIcon,
     alt: 'angular icon',
   },
+  { src: flutterIcon, alt: ' flutter icon' },
   { src: reactJsIcon, alt: 'react js icon' },
   { src: nextJsIcon, alt: 'next js icon' },
   { src: javaIcon, alt: 'java icon' },
