@@ -91,13 +91,13 @@ export function Solutions() {
           <section className="flex flex-row  justify-around  p-10 w-full min-h-96">
             <SolutionCard.description
               ref={cardParRef}
-              animationDelay={index / 2 + 0.5}
+              animationDelay={index * 1.25 + 0.5}
               motionAnimation={motionAnimation}
               item={el}
             />
             <SolutionCard.image
               ref={cardImgRef}
-              animationDelay={index + 0.5}
+              animationDelay={index * 1.5 + 0.5}
               motionAnimation={motionAnimation}
               image={el.image}
               altImage={el.altImage}
