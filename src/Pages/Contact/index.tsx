@@ -1,7 +1,13 @@
+import { ContactForm } from './components/ContactForm'
+import { Contacts } from './components/Contacts'
+import { Header } from './components/Header'
+
 export function Contact() {
   return (
-    <div className="flex h-screen justify-center items-center  bg-purple-900">
-      <h1 className="text-3xl font-bold">Contact</h1>
-    </div>
+    <main className="bg-stone-100 min-h-screen overflow-x-hidden">
+      <Header />
+      <Contacts />
+      <ContactForm />
+    </main>
   )
 }
