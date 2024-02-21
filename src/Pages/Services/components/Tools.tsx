@@ -33,9 +33,9 @@ const TOOLS: Tool[] = [
 export function Tools() {
   return (
     <article className="min-h-screen mt-[15rem] px-10">
-      <section className="grid grid-cols-3 gap-10">
+      <section className="xl:grid xl:grid-cols-3 flex flex-col gap-10 ">
         <div className=" flex flex-col items-center justify-center gap-10">
-          <h2 className="text-3xl  leading-8 tracking-wide">
+          <h2 className="text-3xl  leading-8 tracking-wide text-center xl:text-inherit">
             Potencialize seu{' '}
             <span className="text-green-600 font-bold leading-8 tracking-wide">
               Projeto.
@@ -46,7 +46,7 @@ export function Tools() {
             Realidade.
           </p>
         </div>
-        <div className=" flex flex-row items-center justify-around gap-3 col-span-2 min-h-[24rem]">
+        <div className=" flex xl:flex-row flex-col items-center justify-around xl:gap-3 gap-10 col-span-2 min-h-[24rem]">
           {TOOLS.map((tool) => (
             <Card key={tool.name} {...tool} />
           ))}

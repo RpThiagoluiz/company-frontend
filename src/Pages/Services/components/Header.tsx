@@ -4,7 +4,7 @@ export function Header() {
   return (
     <article className="min-h-screen py-5">
       <section className="relative h-[30rem]">
-        <div className="z-9 w-1/2 md:py-12 xl:px-30 p-8">
+        <div className="z-9 w-full xl:w-1/2 md:py-12 xl:px-30 p-8">
           <h4 className="text-zinc-400">
             Serviços
             <span className="text-green-600 text-xl">.</span>
@@ -28,7 +28,7 @@ export function Header() {
           loading="lazy"
           src={codingImage}
           alt="Person working with laptop"
-          className="z-0 absolute top-0 right-0 h-full transition ease-in-out duration-300 hover:drop-shadow-xl shadow-lg opacity-75 hidden md:block"
+          className="z-0 absolute top-0 right-0 h-full transition ease-in-out duration-300 hover:drop-shadow-xl shadow-lg opacity-75 hidden xl:block"
         />
       </section>
     </article>

@@ -84,11 +84,11 @@ export function Solutions() {
   return (
     <motion.article
       ref={triggerRef}
-      className="min-h-screen flex flex-col gap-10 items-center justify-center bg-zinc-800 p-8 m-16  rounded-lg"
+      className="min-h-screen flex flex-col gap-10 items-center justify-center bg-zinc-800 xl:p-8 p-2 xl:m-16 m-2  rounded-lg"
     >
       {SOLUTIONS.map((el, index) => (
         <div key={el.title.concat(el.highlightTitle)}>
-          <section className="flex flex-row  justify-around  p-10 w-full min-h-96">
+          <section className="flex flex-col-reverse xl:flex-row  justify-around p-2 xl:p-10 w-full min-h-96">
             <SolutionCard.description
               ref={cardParRef}
               animationDelay={index * 1.25 + 0.5}
@@ -123,7 +123,7 @@ const CardDescription = React.forwardRef(
     const { item } = props
 
     return (
-      <div className="w-1/2 flex flex-col items-left justify-around gap-9">
+      <div className="xl:w-1/2 flex flex-col items-left justify-around gap-9">
         <div>
           <h2 className="leading-10 tracking-wide text-xl md:text-3xl font-bold text-center md:text-left text-zinc-200">
             {item.title}{' '}
@@ -144,7 +144,7 @@ const CardDescription = React.forwardRef(
             delay: props.animationDelay,
           }}
           initial="hidden"
-          className="leading-8 tracking-wide"
+          className="xl:leading-8 xl:tracking-wide"
         >
           {item.description}
           <span className="text-green-600 text-xl">.</span>
