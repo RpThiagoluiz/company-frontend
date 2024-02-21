@@ -6,12 +6,20 @@ import { z } from 'zod'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useLocation } from 'react-router-dom'
+
+const CONTACT_ROUTE = '/contact'
 
 export function Footer() {
+  const location = useLocation()
+  const isContactRoute = location.pathname === CONTACT_ROUTE
+
   return (
-    <footer className="bg-stone-100 md:grid md:grid-cols-3 flex flex-col-reverse min-h-[40svh] w-full">
-      <article className="col-span-2">
-        <section className="bg-white flex flex-col xl:grid xl:grid-cols-3  xl:gap-0 2xl:gap-6 2xl:grid-cols-3  2xl:p-12 lg:p-6 p-4">
+    <footer className="bg-stone-100 md:grid md:grid-cols-3 flex flex-col-reverse min-h-[40svh] w-full ">
+      <article className={`${isContactRoute ? 'col-span-3' : 'col-span-2'}  `}>
+        <section
+          className={`bg-white flex ${isContactRoute ? 'flex-col md:flex-row md:justify-around' : 'flex-col xl:grid xl:grid-cols-3 xl:gap-0 2xl:gap-6 2xl:grid-cols-3 2xl:p-12 lg:p-6'}  p-4`}
+        >
           <div className="flex lg:mb-8 mb-2">
             <img
               src={heroImage}
@@ -88,7 +96,9 @@ export function Footer() {
         </div>
       </article>
 
-      <article className="bg-zinc-700 p-12 lg:p-8 md:p-3 h-full w-full ">
+      <article
+        className={`bg-zinc-700 p-12 lg:p-8 md:p-3 h-full w-full ${isContactRoute ? 'hidden' : 'block'}  `}
+      >
         <section className="flex flex-col gap-7">
           <h2 className="text-3xl text-white font-semibold whitespace-nowrap">
             Contato
