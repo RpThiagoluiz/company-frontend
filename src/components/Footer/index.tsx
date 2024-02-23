@@ -52,7 +52,10 @@ export function Footer() {
             </h2>
             <ul className="text-gray-500 dark:text-gray-400 text-sm">
               <li className="mb-2">
-                <Link to="/information-security" className="hover:underline">
+                <Link
+                  to="/information-security"
+                  className="hover:underline mb-2"
+                >
                   Segurança da informação
                 </Link>
               </li>
