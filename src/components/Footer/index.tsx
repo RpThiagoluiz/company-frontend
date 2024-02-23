@@ -6,7 +6,7 @@ import { z } from 'zod'
 import { Button } from '../Button'
 import { Loader } from '../Loader'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const CONTACT_ROUTE = '/contact'
 
@@ -36,36 +36,14 @@ export function Footer() {
               <span className="text-green-600">.</span>
             </h2>
             <ul className="text-gray-500 dark:text-gray-400 text-sm">
+              <li className="mb-2">Dashboard</li>
+              <li className="mb-2">E-commerce</li>
               <li className="mb-2">
-                <a href="" className="hover:underline ">
-                  Dashboard
-                </a>
+                Catálogos
+                <li className="my-2">Landing Page</li>
               </li>
-              <li className="mb-2">
-                <a href="t" className="hover:underline">
-                  E-commerce
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="t" className="hover:underline">
-                  Catálogos
-                </a>
-                <li className="my-2">
-                  <a href="" className="hover:underline ">
-                    Landing Page
-                  </a>
-                </li>
-              </li>
-              <li className="mb-2">
-                <a href="t" className="hover:underline">
-                  Aplicativos
-                </a>
-              </li>
-              <li className="mb-2">
-                <a href="t" className="hover:underline">
-                  Api's
-                </a>
-              </li>
+              <li className="mb-2">Aplicativos</li>
+              <li className="mb-2">Api's</li>
             </ul>
           </div>
           <div>
@@ -74,14 +52,19 @@ export function Footer() {
             </h2>
             <ul className="text-gray-500 dark:text-gray-400 text-sm">
               <li className="mb-2">
-                <a href="#" className="hover:underline">
+                <Link to="/information-security" className="hover:underline">
+                  Segurança da informação
+                </Link>
+              </li>
+              <li className="mb-2">
+                <Link to="/private-policy" className="hover:underline">
                   Politica de privacidade
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#" className="hover:underline">
+                <Link to="/terms-conditions" className="hover:underline">
                   Termos &amp; Condições
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
