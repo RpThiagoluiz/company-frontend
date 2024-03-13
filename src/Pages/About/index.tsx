@@ -3,6 +3,7 @@ import { Description } from './components/Description'
 import { Team } from './components/Team'
 import { Cloud } from './components/Cloud'
 import { SEO } from '@/SEO'
+import { ContactForm } from '@/components/ContactForm'
 
 export function About() {
   return (
@@ -17,12 +18,9 @@ export function About() {
       <Description />
       <Team />
       <Cloud />
-
-      <section className="h-screen w-full flex items-center justify-center bg-red-400">
-        <span className="text-zinc-900">
-          form que vai ter em todas as paginas que não forem home e contato
-        </span>
-      </section>
+      <div className="py-5">
+        <ContactForm />
+      </div>
     </main>
   )
 }

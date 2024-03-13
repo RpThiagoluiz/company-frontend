@@ -1,7 +1,7 @@
 import { SEO } from '@/SEO'
-import { ContactForm } from './components/ContactForm'
 import { Contacts } from './components/Contacts'
 import { Header } from './components/Header'
+import { ContactForm } from '@/components/ContactForm'
 
 export function Contact() {
   return (

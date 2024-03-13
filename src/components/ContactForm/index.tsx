@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
-import { whatsApp } from '../utils/contactList'
+import { whatsApp } from '@/utils/contactList'
 import { Link } from 'react-router-dom'
 
 const phoneRegex = new RegExp(

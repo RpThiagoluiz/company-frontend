@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { CONTACTS, type ContactSocial } from '../utils/contactList'
+import { CONTACTS, type ContactSocial } from '@/utils/contactList'
 
 export const Contacts = () => {
   return (

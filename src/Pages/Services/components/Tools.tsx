@@ -32,7 +32,7 @@ const TOOLS: Tool[] = [
 
 export function Tools() {
   return (
-    <article className="min-h-screen mt-[15rem] px-10">
+    <article className="mt-[15rem] px-10 ">
       <section className="xl:grid xl:grid-cols-3 flex flex-col gap-10 ">
         <div className=" flex flex-col items-center justify-center gap-10">
           <h2 className="text-3xl  leading-8 tracking-wide text-center xl:text-inherit">

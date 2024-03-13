@@ -2,6 +2,7 @@ import { SEO } from '@/SEO'
 import { Header } from './components/Header'
 import { Solutions } from './components/Solutions'
 import { Tools } from './components/Tools'
+import { ContactForm } from '@/components/ContactForm'
 
 export function Services() {
   return (
@@ -15,11 +16,9 @@ export function Services() {
       <Header />
       <Solutions />
       <Tools />
-      <section className="h-screen w-full flex items-center justify-center bg-red-400">
-        <span className="text-zinc-900">
-          form que vai ter em todas as paginas que não forem home e contato
-        </span>
-      </section>
+      <div className="py-5">
+        <ContactForm />
+      </div>
     </main>
   )
 }
