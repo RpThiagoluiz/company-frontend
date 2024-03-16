@@ -1,11 +1,11 @@
-import { formattedWhatsAppMsg } from '@/utils/formattedWhatsAppMsg'
+// import { formattedWhatsAppMsg } from '@/utils/formattedWhatsAppMsg'
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 
-const CONTACT_WHATS = '+5562981467658'
-const WHATS_WELCOME = formattedWhatsAppMsg({
-  message: 'Vim pelo site e queria saber mais',
-})
+const CONTACT_WHATS = '5562981467658'
+// const WHATS_WELCOME = formattedWhatsAppMsg({
+//   message: 'Vim pelo site e queria saber mais',
+// })
 
 export type ContactSocial = {
   name: string
@@ -17,7 +17,7 @@ export type ContactSocial = {
 export const whatsApp: ContactSocial = {
   name: 'WhatsApp',
   contact: '(62) 9.8146-7658',
-  link: `https://api.whatsapp.com/send?l=pt_br?phone=${CONTACT_WHATS}&text=${WHATS_WELCOME}`,
+  link: `https://api.whatsapp.com/send?phone=${CONTACT_WHATS}&text&type=phone_number&app_absent=0`,
   icon: <FaWhatsapp className="text-[32px] text-green-700" />,
 }
 
