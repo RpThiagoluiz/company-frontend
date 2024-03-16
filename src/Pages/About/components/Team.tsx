@@ -52,7 +52,7 @@ export function Team() {
           name="Project managers"
           src={poTeamImage}
           label="person with job is PO"
-          extraStyles="row-span-2 self-center"
+          extraStyles="row-span-3 self-center"
         />
 
         <Member
