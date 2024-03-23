@@ -31,7 +31,7 @@ export const CONTACTS: ContactSocial[] = [
   },
   {
     name: 'Instagram',
-    contact: '@TFSoluções',
+    contact: '@CodeNovaSoluções',
     link: '',
     icon: <FaInstagram className="text-[32px] text-pink-500" />,
   },

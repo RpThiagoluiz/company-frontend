@@ -11,7 +11,7 @@ export function Home() {
   return (
     <main className="bg-stone-100 overflow-x-hidden">
       <SEO
-        title="TF Soluções"
+        title="Code Nova"
         description="Solução de software, criação de sites e apps."
         name="description"
         type="article"

@@ -7,8 +7,8 @@ export function Contact() {
   return (
     <main className="bg-stone-100 min-h-screen overflow-x-hidden">
       <SEO
-        title="Contato - TF Soluções"
-        description="Contato criação de sites e apps, TF Soluções"
+        title="Contato - Code Nova"
+        description="Contato criação de sites e apps, Code Nova"
         name="description"
         type="product"
       />

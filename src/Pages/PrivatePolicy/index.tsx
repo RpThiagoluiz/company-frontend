@@ -5,8 +5,8 @@ export const PrivatePolicy = () => {
   return (
     <main className="min-h-screen w-full overflow-x-hidden  bg-stone-100 ">
       <SEO
-        title="Politica de privacidade - TF Soluções"
-        description="Politica de privacidade, TF Soluções sites e apps"
+        title="Politica de privacidade - Code Nova"
+        description="Politica de privacidade, Code Nova Soluções sites e apps"
         name="description"
         type="terms"
       />
@@ -29,7 +29,7 @@ const TEXTS: TextInfoProps[] = [
   {
     title: 'Politica de Privacidade',
     paragraph:
-      'Esta Política de Privacidade delineia as práticas de coleta de dados da TF Soluções quando você visita o site www.tfsolucoes.com.br, assim como outros sites relacionados (subdomínios), serviços vinculados a esta Política de Privacidade, e todas as comunicações escritas ou verbais (por e-mail, telefone) realizadas com você. Ela descreve as informações coletadas, sua utilização, e seu controle sobre a coleta, correção ou exclusão de dados, além de fornecer informações de contato para esclarecimentos. Nossa política de privacidade tem como prioridade a proteção de suas informações pessoais, comprometendo-nos a usar ou divulgar seus dados apenas conforme descrito nesta Política de Privacidade. Esta política é parte integrante e está sujeita aos Termos e Condições disponíveis no Site. Sugerimos a leitura atenta desta Política de Privacidade antes de utilizar o Site',
+      'Esta Política de Privacidade delineia as práticas de coleta de dados da Code nova Soluções quando você visita o site www.codenova.com.br, assim como outros sites relacionados (subdomínios), serviços vinculados a esta Política de Privacidade, e todas as comunicações escritas ou verbais (por e-mail, telefone) realizadas com você. Ela descreve as informações coletadas, sua utilização, e seu controle sobre a coleta, correção ou exclusão de dados, além de fornecer informações de contato para esclarecimentos. Nossa política de privacidade tem como prioridade a proteção de suas informações pessoais, comprometendo-nos a usar ou divulgar seus dados apenas conforme descrito nesta Política de Privacidade. Esta política é parte integrante e está sujeita aos Termos e Condições disponíveis no Site. Sugerimos a leitura atenta desta Política de Privacidade antes de utilizar o Site',
   },
   {
     title: 'Informações sobre você',
@@ -46,7 +46,7 @@ const TEXTS: TextInfoProps[] = [
   {
     title: 'Seus Direitos',
     paragraph:
-      'Você tem o direito de acessar, corrigir ou solicitar a exclusão de suas informações pessoais. A TF Soluções concorda em fornecer informações pessoais mediante solicitação. Você pode se opor ao marketing direto ou solicitar restrições ao processamento de dados. Se você acredita que seus direitos de privacidade foram violados, pode entrar em contato conosco ou apresentar uma reclamação a uma autoridade de proteção de dados',
+      'Você tem o direito de acessar, corrigir ou solicitar a exclusão de suas informações pessoais. A Code nova Soluções concorda em fornecer informações pessoais mediante solicitação. Você pode se opor ao marketing direto ou solicitar restrições ao processamento de dados. Se você acredita que seus direitos de privacidade foram violados, pode entrar em contato conosco ou apresentar uma reclamação a uma autoridade de proteção de dados',
   },
   {
     title: 'Serviços Integrados',
@@ -57,7 +57,7 @@ const TEXTS: TextInfoProps[] = [
   {
     title: 'Processamento e Transferência',
     paragraph:
-      'As informações pessoais podem ser acessíveis a determinados indivíduos envolvidos na operação do Site ou a terceiros que prestam serviços. A TF Soluções pode armazenar e processar informações no Brasil. Transferências de informações pessoais serão feitas de acordo com os requisitos legais  para garantir proteção adequada',
+      'As informações pessoais podem ser acessíveis a determinados indivíduos envolvidos na operação do Site ou a terceiros que prestam serviços. A Code nova Soluções pode armazenar e processar informações no Brasil. Transferências de informações pessoais serão feitas de acordo com os requisitos legais  para garantir proteção adequada',
   },
 
   {
@@ -75,18 +75,18 @@ const TEXTS: TextInfoProps[] = [
   {
     title: 'Outros Websites',
     paragraph:
-      'Esta Política de Privacidade se aplica apenas ao site da TF Soluções e não a quaisquer websites externos vinculados. A TF Soluções não é responsável pelas práticas de privacidade de outros websites',
+      'Esta Política de Privacidade se aplica apenas ao site da Code nova Soluções e não a quaisquer websites externos vinculados. A Code nova Soluções não é responsável pelas práticas de privacidade de outros websites',
   },
 
   {
     title: 'Alterações em nossa Política',
     paragraph:
-      'A TF Soluções reserva-se o direito de alterar esta Política de Privacidade a seu critério. As alterações serão postadas no Site para manter os usuários informados',
+      'A Code nova Soluções reserva-se o direito de alterar esta Política de Privacidade a seu critério. As alterações serão postadas no Site para manter os usuários informados',
   },
 
   {
     title: 'Contato',
     paragraph:
-      'Se você tiver alguma dúvida, comentário ou solicitação sobre esta Política de Privacidade, envie um e-mail para adm@TF Soluções.com.br',
+      'Se você tiver alguma dúvida, comentário ou solicitação sobre esta Política de Privacidade, envie um e-mail para adm@Code Nova.com.br',
   },
 ]

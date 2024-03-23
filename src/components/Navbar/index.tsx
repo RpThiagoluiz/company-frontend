@@ -31,7 +31,7 @@ export function Navbar() {
             className="h-[35px] w-[35px] hidden sm:flex drop-shadow-green "
           />
           <span className="ml-2 mt-2 sm:mt-0 text-black font-semibold text-xl">
-            TF Solutions
+            Code Nova
           </span>
         </NavLink>
         <nav className="flex">
@@ -103,7 +103,7 @@ export function Navbar() {
         <div className="flex justify-end"></div>
         <div className="flex justify-center">
           <p className="m-[25px] text-gray-100/30 text-sm">
-            All Rights Reserved - TF Solutions
+            All Rights Reserved - Code Nova
           </p>
         </div>
       </nav>

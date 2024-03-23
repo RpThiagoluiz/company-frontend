@@ -9,8 +9,8 @@ export function About() {
   return (
     <main className="min-h-screen bg-stone-100 ">
       <SEO
-        title="Sobre - TF Soluções"
-        description="TF Soluções sobre a empresa"
+        title="Sobre - Code Nova"
+        description="Code Nova Soluções sobre a empresa"
         name="description"
         type="product"
       />

@@ -27,7 +27,7 @@ export function Footer() {
               alt="TF LOGO"
             />
             <span className="text-3xl text-zinc-700 font-semibold whitespace-nowrap">
-              TF Soluções
+              Code Nova
             </span>
           </div>
           <div className=" lg:mb-8 mb-2">
@@ -77,7 +77,7 @@ export function Footer() {
 
         <div className="px-8 py-2 bg-white flex justify-center min-h-16">
           <span className="text-xs text-stone-300">
-            TF Soluções 2023 - 2024. All rights reserved.
+            Code Nova Soluções2023 - 2024. All rights reserved.
           </span>
         </div>
       </article>

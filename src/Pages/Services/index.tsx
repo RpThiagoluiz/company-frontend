@@ -8,8 +8,8 @@ export function Services() {
   return (
     <main className="bg-stone-100 min-h-screen">
       <SEO
-        title="Serviços - TF Soluções"
-        description="Serviços criação de sites e apps, TF Soluções"
+        title="Serviços - Code Nova"
+        description="Serviços criação de sites e apps, Code Nova"
         name="description"
         type="product"
       />
